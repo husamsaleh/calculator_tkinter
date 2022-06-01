@@ -22,6 +22,7 @@ root.resizable(False, False)
 DISPLAY = Label(root, width=57, height=5)
 
 #images////////////////////////////////////////////////////////////////////start
+
 divide_image = PhotoImage(file='div_img.png')
 img_label_d = Label(image=divide_image)
 
@@ -86,6 +87,7 @@ def lower():
     mixer.music.set_volume(0.2)
 
 #***** Main Menu start*****
+
 menu = Menu(root)
 root.config(menu=menu)
 
@@ -114,22 +116,32 @@ menu.add_cascade(label="About" ,command=helpo )
 
 #***** Main Menu end *****
 
+
 #***** Toolbar start *****
+
 toolbar = Frame(root, bg="light blue")
 toolbar.grid()
 
+
 #***** Toolbar end   *****
+
+
 mixer.init()
 expression = ""
 input_text = StringVar()
 input_text2 = StringVar()
 
 
-# Let us creating a frame for the input field
+# Let us create a frame for the input field
+
+
 input_frame = Frame(root, width=20, height=20, bd=0, highlightbackground="black", highlightcolor="black",
                     highlightthickness=2)
 input_frame.grid(row=0, column=0 ,columnspan=3)
+
+
 # Let us create a input field inside the 'Frame'
+
 input_field = Entry(input_frame, font=('arial', 16, 'bold'), textvariable=input_text, width=20, bg="#eee", bd=0,justify=RIGHT)
 input_field.grid(row=0, column=0 ,columnspan=3 )
 input_field.grid(ipady=10)
@@ -138,7 +150,10 @@ input_field.grid(ipady=10)
 input_frame2 = Frame(root, width=4, height=5, bd=0, highlightbackground="black", highlightcolor="black",
                     highlightthickness=2)
 input_frame2.grid(row=0, column=3 ,columnspan=1)
+
+
 # Let us create a input field inside the 'Frame'
+
 input_field2 = Entry(input_frame2, font=('arial', 10, 'bold'), textvariable=input_text2, width=5, bg="#eee", bd=0,justify=LEFT)
 input_field2.grid(row=0, column=3 ,columnspan=1)
 input_field2.grid(ipady=2)
@@ -283,7 +298,11 @@ num9.grid(row=1, column=2)
 
 num0 = Button(root, text="0", height=4, width=12, bg="#ecf0f1", fg="black", cursor="hand2", command=lambda: [ btn_click(0)])
 num0.grid(row=4, column=0)
+
+
 #operations//////////////////////////////////////////////////////////////////////////////////////
+
+
 button_add = Button(root, image=plus_image, height=65,width=88, bg="#ecf0f1",cursor="tcross" , command=lambda:[btn_click("+")])
 button_add.grid(row=4, column=1)
 
@@ -295,7 +314,11 @@ button_mult.grid(row=5, column=0)
 
 button_dev = Button(root, image=divide_image,   height=65,width=88, bg="#ecf0f1" ,cursor="hand1", command=lambda:[btn_click("/")] )
 button_dev.grid(row=6, column=0)
+
+
 #operations//////////////////////////////////////////////////////////////////////////////////////
+
+
 button_equal = Button(root, image=eql_img, height=65,width=88, bg="#bdc3c7" , cursor="circle	", command=lambda:[ p_music(),bt_equal()])
 button_equal.grid(row=5, column=1, columnspan=1)
 
